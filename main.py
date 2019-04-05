@@ -6,7 +6,7 @@ import math
 import os
 
 ##options
-exportsprites=1
+exportsprites=0
 exportspritesheet=1
 exportmap=1
 
