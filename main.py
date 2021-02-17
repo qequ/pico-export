@@ -28,9 +28,7 @@ for s in separators:
         offset_pos_map += 1
 
 # have to check if there is __map__ in the cart
-flag_map = False
-if "__map__" in cart_data:
-    flag_map = True
+flag_map = "__map__" in cart_data
 
 # split cart data into sections based on content
 cart_data = re.split(
