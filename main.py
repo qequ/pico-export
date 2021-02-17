@@ -27,6 +27,10 @@ for s in separators:
     if s not in cart_data:
         offset_pos_map += 1
 
+# have to check if there is __map__ in the cart
+flag_map = False
+if "__map__" in cart_data:
+    flag_map = True
 
 # split cart data into sections based on content
 cart_data = re.split(
@@ -34,7 +38,7 @@ cart_data = re.split(
 
 
 map_data = ''
-if "__map__" in cart_data:
+if flag_map:
     map_data = cart_data[5 - offset_pos_map].replace('\n', '')
 
 gfx_data = cart_data[2].replace('\n', '')
